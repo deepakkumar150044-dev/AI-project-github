@@ -39,3 +39,6 @@
 #  to = azurerm_cognitive_deployment.models
 #  id = "/subscriptions/3d5f5fa8-f989-49ca-b466-b80eff5c9774/resourceGroups/RG-AI-Service-Resources/providers/Microsoft.CognitiveServices/accounts/oai-service-account-01/deployments/gpt-4o-mini"
 #}
+# import{
+    #deepak
+#}
