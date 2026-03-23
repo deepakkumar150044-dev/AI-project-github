@@ -14,9 +14,9 @@ resource "azurerm_resource_group" "rg-app-service" {
 # App Service Plan: Defines the underlying VM's region, scale, and pricing tier (e.g., S1, P1v2) using azurerm_service_plan
 
 resource "azurerm_service_plan" "APPSVCPLAN" {
-  name                = "app-svc-plan-DSCU-00003"
+ name                = "app-svc-plan-DSCU-00003"
   resource_group_name = azurerm_resource_group.rg-app-service.name
-  location            = azurerm_resource_group.rg-app-service.location
+ location            = azurerm_resource_group.rg-app-service.location
   os_type             = "Linux"                           # Can be Linux, Windows, or WindowsContainer
   sku_name            = "B1"                            # Example SKU; common options: B1, S1, P1v2, etc.
 }

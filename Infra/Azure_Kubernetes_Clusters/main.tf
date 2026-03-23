@@ -21,7 +21,8 @@ resource "azurerm_kubernetes_cluster" "aks" {
   default_node_pool {
     name       = "systempool"
     node_count = 2
-    vm_size    = "standard_d2as_v7"
+    # vm_size    = "standard_d2as_v7"
+    vm_size    ="B1ls"  # "standard_d2as_v7"
     #vnet_subnet_id = azurerm_subnet.example.id
     // os_type is NOT used here
     os_sku  = "Ubuntu" 
@@ -36,7 +37,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
   # private_cluster_enabled = true
 
   # Use "System" to let AKS manage the private DNS zone, or provide a specific ID
-  private_dns_zone_id = "System" 
+  # private_dns_zone_id = "System" 
 
 
   #azure_active_directory_rbac {
