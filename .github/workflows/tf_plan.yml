@@ -29,10 +29,11 @@ jobs:
 
             - name: Terraform Init
               id: init
-              run: terraform -chdir="../AIOpsproject/Infra/Azure_Kubernetes_Clusters/" init
-
+             # run: terraform -chdir="../AIOpsproject/Infra/Azure_Kubernetes_Clusters/" init
+              run: terraform -chdir="../AI-project-github/Infra/Azure_Kubernetes_Clusters/" init
             - name: Terraform Plan
               id: plan
               if: github.event_name == 'push'
               #run: terraform -chdir="../GitOps/Infra/Azure_Kubernetes_Clusters/" plan -no-color 
-              run: terraform -chdir="../AIOpsproject/Infra/Azure_Kubernetes_Clusters/" plan -generate-config-out=generated.tf
+              #run: terraform -chdir="../AIOpsprojectInfra/Azure_Kubernetes_Clusters/" plan -generate-config-out=generated.tf
+              #run: terraform -chdir="../AI-project-github/Azure_Kubernetes_Clusters/" plan -generate-config-out=generated.tf
