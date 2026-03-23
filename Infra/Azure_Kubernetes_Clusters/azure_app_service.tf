@@ -18,7 +18,7 @@ resource "azurerm_service_plan" "APPSVCPLAN" {
   resource_group_name = azurerm_resource_group.rg-app-service.name
   location            = azurerm_resource_group.rg-app-service.location
   os_type             = "Linux"                           # Can be Linux, Windows, or WindowsContainer
-  sku_name            = "S1"                            # Example SKU; common options: B1, S1, P1v2, etc.
+  sku_name            = "B1"                            # Example SKU; common options: B1, S1, P1v2, etc.
 }
 
 

@@ -1,17 +1,18 @@
 # Create a Resource Group for SouthCentralUS location for SecurityCluster
 resource "azurerm_resource_group" "rg" {
-  name     = "RG-DSCU-SecCluster-03"
-  location = "SouthCentralUS"
+  name     = "RG-Dev-EUS-SecClutr-03"
+  location = "eastUS"
   tags = {
-    name = "Gokul_Admin"
-    phone_Number = "+91998877665544"
-    email_id = "gokul@deloitte.com"
+    name = "Deepak_Admin"
+    phone_Number = "+918374166525"
+    email_id = "Deepak@deloitte.com"
+    logs_transer="splunk-cloud"
   }
 }
 
 # Create the AKS Cluster
 resource "azurerm_kubernetes_cluster" "aks" {
-  name                = "AKS-DSCU-SecCluster"
+  name                = "AKS-Dev-EUS-SecClutr"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   dns_prefix          = "wellfFargoaksseccluster"
