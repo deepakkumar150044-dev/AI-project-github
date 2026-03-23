@@ -38,7 +38,7 @@ jobs:
               if: github.event_name == 'push'
               #run: terraform -chdir="../GitOps/Infra/Azure_Kubernetes_Clusters/" plan -no-color
               #run: terraform -chdir="../AIOpsproject/Infra/Azure_Kubernetes_Clusters/" plan -generate-config-out=generated.tf
-              run: terraform -chdir="../AI-project-github/Azure_Kubernetes_Clusters/" plan -generate-config-out=generated.tf
+              run: terraform -chdir="../AI-project-github/Infra/Azure_Kubernetes_Clusters/" plan -generate-config-out=generated.tf
               #continue-on-error: true
 
 
