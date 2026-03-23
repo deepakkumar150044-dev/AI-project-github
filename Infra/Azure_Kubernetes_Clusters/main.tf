@@ -32,7 +32,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
   #}
 
   # Private cluster 
-  private_cluster_enabled = true
+  # private_cluster_enabled = true
 
   # Use "System" to let AKS manage the private DNS zone, or provide a specific ID
   private_dns_zone_id = "System" 
