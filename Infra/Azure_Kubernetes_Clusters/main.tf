@@ -9,6 +9,16 @@ resource "azurerm_resource_group" "rg" {
     logs_transer="splunk-cloud"
   }
 }
+resource "azurerm_resource_group" "rg-2" {
+  name     = "RG-QA-EUS-SecClutr-03"
+  location = "eastus2"
+  tags = {
+    name = "Deepak_Azure_AIinfra_Admin"
+    phone_Number = "+918374166525"
+    email_id = "Deepak@deloitte.com"
+    logs_transer="Azure-Foundry"
+  }
+}
 
 # Create the AKS Cluster
 resource "azurerm_kubernetes_cluster" "aks" {
